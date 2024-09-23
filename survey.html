@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF; /* white background */
+            color: #ffffff; /* White text */
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #006633; /* GMU green */
+            font-size: 2.5em;
+            padding-bottom: 20px;
+        }
+
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #006633; /* GMU green form background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 1.1em;
+            color: #FFCC33; /* Yellow labels */
+            margin-right: 10px;
+            width: 200px; /* Fixed width for labels */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="date"],
+        textarea,
+        select {
+            flex: 1; /* Allow the input fields to take up remaining space */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder,
+        input[type="url"]::placeholder,
+        input[type="date"]::placeholder {
+            color: #cccccc;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"]{
+            width: 30%;
+            padding: 12px;
+            margin-right: 4%;
+            background-color: #FFCC33; /* Yellow buttons */
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            color: #006633; /* Green text */
+            cursor: pointer;
+        }
+        input[type="reset"] {
+            width: 30%;
+            padding: 12px;
+            margin-right: 4%;
+            background-color: #FF0000; /* Red buttons */
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            color: #006633; /* Green text */
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover{
+            background-color: #ffffff;
+            color: #006633;
+            transition: 0.3s ease;
+        }
+        input[type="reset"]:hover{
+            background-color: #ffffff;
+            color: #006633;
+            transition: 0.3s ease;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body onload="document.getElementById('firstName').focus()">
+    <h1>George Mason University Student Survey</h1>
+    <form onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="firstName">First Name:<span class="required">*</span></label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name:<span class="required">*</span></label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="streetAddress">Street Address:<span class="required">*</span></label>
+            <input type="text" id="streetAddress" name="streetAddress" placeholder="Enter your street address" required>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City:<span class="required">*</span></label>
+            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+        </div>
+
+        <div class="form-group">
+            <label for="state">State:<span class="required">*</span></label>
+            <input type="text" id="state" name="state" placeholder="Enter your state" required>
+        </div>
+
+        <div class="form-group">
+            <label for="zip">Zip Code:<span class="required">*</span></label>
+            <input type="text" id="zip" name="zip" placeholder="Enter your zip code" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telephone">Telephone Number:<span class="required">*</span></label>
+            <input type="text" id="telephone" name="telephone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:<span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="url">url:<span class="required">*</span></label>
+            <input type="url" id="url" name="url" placeholder="https://example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dateOfSurvey">Date of Survey:<span class="required">*</span></label>
+            <input type="date" id="dateOfSurvey" name="dateOfSurvey" required>
+        </div>
+
+        <div class="form-group">
+            <label for="gradMonth">High School Graduation Month:<span class="required">*</span></label>
+            <input list="months" id="gradMonth" name="gradMonth" placeholder="Select month" required>
+            <datalist id="months">
+                <option value="January">
+                <option value="February">
+                <option value="March">
+                <option value="April">
+                <option value="May">
+                <option value="June">
+                <option value="July">
+                <option value="August">
+                <option value="September">
+                <option value="October">
+                <option value="November">
+                <option value="December">
+            </datalist>
+            <input type="text" id="gradYear" name="gradYear" placeholder="Year" required>
+        </div>
+
+        <div class="checkbox-group">
+            <label>What did you like most about the campus?<span class="required">*</span></label>
+            <div>
+                <input type="checkbox" id="likedStudents" name="likedMost" value="students">
+                <label for="likedStudents">Students</label>
+                <input type="checkbox" id="likedLocation" name="likedMost" value="location">
+                <label for="likedLocation">Location</label>
+                <input type="checkbox" id="likedCampus" name="likedMost" value="campus">
+                <label for="likedCampus">Campus</label>
+                <input type="checkbox" id="likedAtmosphere" name="likedMost" value="atmosphere">
+                <label for="likedAtmosphere">Atmosphere</label>
+                <input type="checkbox" id="likedDormRooms" name="likedMost" value="dormRooms">
+                <label for="likedDormRooms">Dorm Rooms</label>
+                <input type="checkbox" id="likedSports" name="likedMost" value="sports">
+                <label for="likedSports">Sports</label>
+            </div>
+        </div>
+
+        <div class="radio-group">
+            <label>How did you become interested in the university?<span class="required">*</span></label>
+            <div>
+                <input type="radio" id="interestFriends" name="interest" value="friends">
+                <label for="interestFriends">Friends</label>
+                <input type="radio" id="interestTelevision" name="interest" value="television">
+                <label for="interestTelevision">Television</label>
+                <input type="radio" id="interestInternet" name="interest" value="internet">
+                <label for="interestInternet">Internet</label>
+                <input type="radio" id="interestOther" name="interest" value="other">
+                <label for="interestOther">Other</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="recommend">Likelihood of recommending this school to others:<span class="required">*</span></label>
+            <select id="recommend" name="recommend" required>
+                <option value=""disabled selected>select an option</option>
+                <option value="veryLikely">Very Likely</option>
+                <option value="likely">Likely</option>
+                <option value="unlikely">Unlikely</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments here"></textarea>
+        </div>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Cancel">
+    </form>
+</body>
+</html>

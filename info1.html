@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Department Information</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f2f2f2; /* Light gray background */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styling */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center content horizontally */
+            padding: 10px;
+            background-color: #006633; /* GMU Green */
+            color: #FFCC33; /* GMU Yellow */
+        }
+
+        .header img {
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 3.0rem;
+            color: #FFCC33; /* GMU Yellow */
+        }
+
+        /* Styling for the main content */
+        .custom-box {
+            border: 5px solid #006633; /* GMU Green border */
+            padding: 5px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Box shadow */
+            background-color: #ffffff; /* White background inside heading box */
+        }
+
+        h1, h2 {
+            color: #006633; /* GMU Green */
+            text-align: center;
+        }
+
+        p {
+            color: #006633; /* GMU Green for paragraph text */
+        }
+
+        ul, li {
+            color: #006633; /* GMU Green for list items */
+        }
+
+        /* Custom button style */
+        .btn-custom {
+            background-color: #FFCC33; /* GMU Yellow */
+            color: #006633; /* GMU Green for button text */
+            border: 2px solid #006633; /* GMU Green border */
+        }
+
+        .btn-custom:hover {
+            background-color: #006633;
+            color: #FFCC33;
+        }
+
+        .custom-link {
+            color: #FFCC33; /* GMU Yellow for links */
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .custom-link:hover {
+            color: #006633; /* GMU Green on hover */
+        }
+
+        .table {
+            border: 1px solid #006633; /* GMU Green */
+        }
+
+        .table th {
+            background-color: #006633; /* GMU Green */
+            color: #FFCC33; /* GMU Yellow */
+        }
+
+        .table td {
+            color: #006633; /* GMU Green */
+        }
+
+        /* Additional styling for creativity */
+        .highlight-box {
+            background-color: #FFCC33;
+            padding: 10px;
+            border-left: 5px solid #006633;
+            margin-bottom: 20px;
+        }
+
+        .highlight-box p {
+            color: #006633;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #006633;
+            color: #FFCC33;
+            text-align: center;
+        }
+
+        /* Adding some hover effects for interactivity */
+        .table-hover tbody tr:hover td {
+            background-color: #FFCC33;
+            color: #006633;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with GMU logo and name -->
+    <header class="header">
+        <img src="GMU logo.png" alt="GMU Logo">
+        <h2>George Mason University</h2>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Department Description -->
+        <div class="custom-box">
+            <h1>Computer Science Department</h1>
+        </div>
+
+        <p class="lead">The Computer Science Department at George Mason University offers a robust academic environment that prepares students for rewarding careers in software development, data science, and artificial intelligence. With state-of-the-art facilities and experienced faculty, the department fosters innovation and excellence in computing education.</p>
+
+        <!-- Highlight box for special announcements -->
+        <div class="highlight-box">
+            <p>Don't miss out! New programs are available for the Fall semester. Apply today!</p>
+        </div>
+
+        <!-- MS Degrees List -->
+        <h2>MS Degree Programs</h2>
+        <ul>
+            <li>MS in Computer Science</li>
+            <li>MS in Software Engineering</li>
+            <li>MS in Information Systems</li>
+            <li>MS in Information Security and Assurance</li>
+        </ul>
+
+        <!-- Required Courses Section -->
+        <h2>Required Courses</h2>
+
+        <!-- Required Courses for CS -->
+        <h3>MS in Computer Science</h3>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Course Number</th>
+                    <th>Course Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CS531</td>
+                    <td>Computer Systems and System Programming</td>
+                </tr>
+                <tr>
+                    <td>CS580</td>
+                    <td>Introduction to Artificial Intelligence</td>
+                </tr>
+                <tr>
+                    <td>CS583</td>
+                    <td>Analysis of Algorithms I</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Required Courses for SWE -->
+        <h3>MS in Software Engineering</h3>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Course Number</th>
+                    <th>Course Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SWE 619</td>
+                    <td>Object-Oriented Software Specification and Construction</td>
+                </tr>
+                <tr>
+                    <td>SWE 621</td>
+                    <td>Software Modeling and Architectural Design</td>
+                </tr>
+                <tr>
+                    <td>SWE 632</td>
+                    <td>User Interface Design and Development</td>
+                </tr>
+                <tr>
+                    <td>SWE 637</td>
+                    <td>Software Testing</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Required Courses for INFS -->
+        <h3>MS in Information Systems</h3>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Course Number</th>
+                    <th>Course Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>COMP 502</td>
+                    <td>Mathematical Foundations of Computing</td>
+                </tr>
+                <tr>
+                    <td>CS 550</td>
+                    <td>Database Systems</td>
+                </tr>
+                <tr>
+                    <td>INFS 622</td>
+                    <td>Information Systems Analysis and Design</td>
+                </tr>
+                <tr>
+                    <td>INFS 580</td>
+                    <td>Analytics: Big Data to Information</td>
+                </tr>
+                <tr>
+                    <td>INFS 611</td>
+                    <td>Rapid Information Systems Prototyping</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Required Courses for ISA -->
+        <h3>MS in Information Security and Assurance</h3>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Course Number</th>
+                    <th>Course Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ISA 562</td>
+                    <td>Information Security Theory and Practice</td>
+                </tr>
+                <tr>
+                    <td>ISA 656</td>
+                    <td>Network Security</td>
+                </tr>
+                <tr>
+                    <td>INFS 612</td>
+                    <td>Principles and Practice of Communication Networks</td>
+                </tr>
+                <tr>
+                    <td>CS 555</td>
+                    <td>Computer Communications and Networking</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Link to CS Survey Page -->
+        <h2>Take the Survey</h2>
+        <p>
+            We value your feedback! <a href="survey.html" class="custom-link">Take the CS Department Survey</a> to let us know about your experience with our department and campus.
+        </p>
+        <a href="survey.html" class="btn btn-custom">Go to Survey</a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+    
